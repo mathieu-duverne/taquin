@@ -11,6 +11,8 @@
 
 <body>
         <h1>Jeux du taquin</h1>
+        <a href="index.php">Restart</a><br>
+        <button id="button">Shuffle</button>
     <section id="dedan">
         <section id="shuffle">
             
@@ -40,13 +42,13 @@
                 <img id="8" width="200" src="images/8.png" alt="">
             </div>
             <div id="div9">
-                <img id="9" width="200" src="" alt="">
+                <img id="9" width="200" src="images/white.svg.webp" alt="">
             </div>
             <!-- ========== -->
 
         </section>
     </section>
-        <button id="button">Shuffle</button>
+        
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

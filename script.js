@@ -17,14 +17,13 @@ for(let i =0;i < 9;i++){
     {
             //ICI VAR I vaux donc la case blanche on BoardGames de 0-8
             console.log(i);
-
-           
         recursive(i);
      }
     }
 })
 
 // ====== Recursive function ======
+
 // a chaques fois qu'une div adjacente(only) est click elle prend la place puis Callback recursivité <3<3<3<3<3  
 function recursive(i){
     var parent = $("div");
@@ -32,7 +31,8 @@ function recursive(i){
             // si CASE BLANCHE ==0 
             // si CASE BLANCHE ==8
             // ect.....; 
-    if(i==0){
+            console.log($('#'+parent.children()[1].id));
+        if(i==0){
         $('#'+parent.children()[1].id).click(function(event){
             // Prend la place de l'autre temp it's case white BGGG
             let temp = parent.children()[0];
