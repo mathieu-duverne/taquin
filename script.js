@@ -1,12 +1,19 @@
+// button shuffle
 $("#button").click(function () {
+    
+    // parent of All images
     var parent = $("#shuffle");
+    // console.log(parent);
+
+    // const divs tout les img tout ont une div respective
     const divs = parent.children();
-    // console.log(divs);
-    // console.log(divs.length)
-    console.log($('#'+parent.children()[0].id));
+    // console.log(divs.children)
+    
+    // ====== FUNCTION shuffle ======
     while (divs.length) {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
+    // Parent est maintenant toutes les div !
     var parent = $("div");
 
     // BOUCLE QUI PARCOURS LE TABLEAU DE JEUX
@@ -31,7 +38,8 @@ function recursive(i){
             // si CASE BLANCHE ==0 
             // si CASE BLANCHE ==8
             // ect.....; 
-            console.log($('#'+parent.children()[1].id));
+            // user click on this children const i
+            // console.log($('#'+parent.children()[i].id));
         if(i==0){
         $('#'+parent.children()[1].id).click(function(event){
             // Prend la place de l'autre temp it's case white BGGG
