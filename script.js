@@ -1,3 +1,8 @@
+    // console.log("ok");
+    // Win();
+    // var parent = $("div");
+    //     console.log($(parent.children()[0].id));
+
 // button shuffle
 $("#button").click(function () {
     
@@ -10,38 +15,63 @@ $("#button").click(function () {
     // console.log(divs.children)
     
     // ====== FUNCTION shuffle ======
-    while (divs.length) {
+    while (divs.length) 
+    {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
+
     // Parent est maintenant toutes les div !
     var parent = $("div");
 
-    // BOUCLE QUI PARCOURS LE TABLEAU DE JEUX
+// BOUCLE QUI PARCOURS LE TABLEAU DE JEUX
 for(let i =0;i < 9;i++){
+
     // console.log(parent.children()[i].id)
     // ID DE L'IMAGE BLANCHE 
-    if( parent.children()[i].id==9)
+    if(parent.children()[i].id==9)
     {
-            //ICI VAR I vaux donc la case blanche on BoardGames de 0-8
-            // console.log(i);
+        //ICI VAR I vaux donc la case blanche on BoardGames de 0-8
+        // console.log(i);
         recursive(i);
      }
     }
 })
+
+// function Player Win
+function Win(img){
+    if(img[0].id==1 &&
+       img[1].id==2 &&
+       img[2].id==3 &&
+       img[3].id==4 &&
+       img[4].id==5 &&
+       img[5].id==6 &&
+       img[6].id==7 &&
+       img[7].id==8 && 
+       img[8].id==9)
+    {
+        document.write("<h1>You are a winner</h1>");
+        document.write("<a href='index.php'>Restart</a>");
+    }
+}
 
 // ====== Recursive function ======
 
 // a chaques fois qu'une div adjacente(only) est click elle prend la place puis Callback recursivité <3<3<3<3<3  
 function recursive(i){
     var parent = $("div");
+    const img = $("img");
+    
+    //verification si win 
+    Win(img);
      // CHAQUE CONDITION DE DEPART EST EGALE A UN 0(haut-droite)-8(bas droite)
             // si CASE BLANCHE ==0 
             // si CASE BLANCHE ==8
             // ect.....; 
             // user click on this children const i
-            // console.log($('#'+parent.children()[i].id));
+        //id img position 0 sur 8 board
+        console.log(img[0].id);
         if(i==0){
-        $('#'+parent.children()[1].id).click(function(event){
+            $('#'+parent.children()[1].id).click(function(event){
             // Prend la place de l'autre temp it's case white BGGG
             let temp = parent.children()[0];
             parent[0].append(parent.children()[1])
