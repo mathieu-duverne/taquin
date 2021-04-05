@@ -23,7 +23,7 @@ for(let i =0;i < 9;i++){
     if( parent.children()[i].id==9)
     {
             //ICI VAR I vaux donc la case blanche on BoardGames de 0-8
-            console.log(i);
+            // console.log(i);
         recursive(i);
      }
     }

@@ -10,9 +10,10 @@
 </head>
 
 <body>
-        <h1>Jeux du taquin</h1>
+    <h1>Jeux du taquin</h1>
         <a href="index.php">Restart</a><br>
         <button id="button">Shuffle</button>
+
     <section id="dedan">
         <section id="shuffle">
             
