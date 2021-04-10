@@ -16,7 +16,6 @@
 
     <section id="dedan">
         <section id="shuffle">
-            
             <!-- 8 IMAGES DU TAQUIN -->
             <div id="div1">
                 <img id="1" width="200" src="images/1.png" alt="">

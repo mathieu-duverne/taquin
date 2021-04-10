@@ -1,8 +1,3 @@
-    // console.log("ok");
-    // Win();
-    // var parent = $("div");
-    //     console.log($(parent.children()[0].id));
-
 // button shuffle
 $("#button").click(function () {
     
@@ -63,13 +58,14 @@ function recursive(i){
     
     //verification si win 
     Win(img);
+
      // CHAQUE CONDITION DE DEPART EST EGALE A UN 0(haut-droite)-8(bas droite)
             // si CASE BLANCHE ==0 
             // si CASE BLANCHE ==8
             // ect.....; 
             // user click on this children const i
         //id img position 0 sur 8 board
-        console.log(img[0].id);
+        // console.log(img[0].id);
         if(i==0){
             $('#'+parent.children()[1].id).click(function(event){
             // Prend la place de l'autre temp it's case white BGGG
@@ -143,8 +139,15 @@ function recursive(i){
             let temp = parent.children()[1];
             parent[1].append(parent.children()[2])
             parent[2].append(temp);
+            $('#'+parent.children()[0].id).off();
             $('#'+parent.children()[1].id).off();
+            $('#'+parent.children()[2].id).off();
+            $('#'+parent.children()[3].id).off();
+            $('#'+parent.children()[4].id).off();
             $('#'+parent.children()[5].id).off();
+            $('#'+parent.children()[6].id).off();
+            $('#'+parent.children()[7].id).off();
+            $('#'+parent.children()[8].id).off();
             recursive(2);
         })
 
